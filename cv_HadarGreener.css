@@ -1,0 +1,47 @@
+body{
+    background-color: rgba(255, 245, 238, 0.788);
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 150px;
+        grid-gap: 20px;
+        padding: 10px;
+        grid-template-areas:
+        'HEADER HEADER HEADER HEADER HEADER' 
+        'EDUCATION  EDUCATION MILITARY SERVICE MILITARY SERVICE RELEVANT PROJECTS'
+        'TECHNICAL SKILLS TECHNICAL SKILLS MILITARY SERVICE MILITARY SERVICE RELEVANT PROJECTS'
+        ;
+    }
+    
+    .item1{
+        grid-area: header; grid-row:  1/ span 2;
+        background-color: sandybrown; padding: 10px; font-weight: bold; font-size: 150%;
+        color: thistle;
+    }
+    
+    .item2{
+        grid-area: EDUCATION;
+        grid-row: 3/span 20;
+    
+    }
+    
+    .item3{
+        grid-area: TECHNICAL SKILLS;
+        grid-row: 10/span 10;
+    }
+    
+    .item4{
+        grid-area: MILITARY SERVICE;
+        grid-row: 3/span 20;
+    }
+    
+    .item5{
+        grid-area: RELEVANT PROJECTS;
+        grid-row: 3/span 20;
+    }
+    
+    div > div {
+        background-color: rgb(255,255,255,0.5);
+    }
