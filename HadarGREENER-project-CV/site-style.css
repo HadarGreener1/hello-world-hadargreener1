@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  background-color: #232324;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url('background-2.jpg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+.row {
+  display: flex;
+}
+
+.row > div:last-child {
+  margin-left: 100px;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(500px, 1fr) 2fr;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-areas:
+    'main-black top-row'
+    'main-black middle-row'
+    'main-black bottom-row'
+    'footer footer';
+}
+.main-black {
+  grid-area: main-black;
+  background-color: #000;
+}
+
+.image-container {
+  padding: 30px;
+  color: #fff;
+}
+
+.image-container img {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: 0px 13%;
+  /* border: 5px solid #f7f8ff; */
+}
+.image-container h1 {
+  margin-top: 8px;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 44px;
+  letter-spacing: 4px;
+  margin-left: -4px;
+}
+
+.main-black h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 80px;
+  margin: 0;
+  margin: -54px 0 0 33px;
+}
+
+.main-black h3 {
+  margin-top: 14px;
+  text-align: center;
+  width: 300px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-left: -3px;
+}
+.top-row,
+.bottom-row,
+.middle-row {
+  padding: 30px;
+  height: 220px;
+}
+
+.top-row p,
+.middle-row p,
+.bottom-row p {
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 16px;
+
+  line-height: 30px;
+  font-weight: bold;
+  max-width: 1200px;
+  margin: 0 0 50px 0;
+}
+
+.top-row h2,
+.middle-row h2,
+.bottom-row h2 {
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.top-row h3,
+.middle-row h3,
+.bottom-row h3 {
+  font-family: 'JetBrains Mono', sans-serif;
+  font-weight: 1000;
+  color: #0e537d;
+}
+.top-row {
+  grid-area: top-row;
+  background-color: #fff;
+}
+
+.top-row ul,
+.middle-row ul,
+.bottom-row ul {
+  margin: 10px 0 25px 0;
+  padding: 0 0 0 20px;
+  font-family: 'JetBrains Mono', sans-serif;
+}
+
+.bottom-row ul li {
+  padding: 3px;
+}
+
+.bottom-row {
+  grid-area: bottom-row;
+  background-color: #cecbd1;
+}
+
+.middle-row {
+  grid-area: middle-row;
+  background-color: #e8e3db;
+}
+
+.bottom {
+  grid-area: bottom;
+}
+
+.top-row .date {
+  float: right;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.footer .icon {
+  font-size: 50px;
+  color: #fff;
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.footer .icon:hover {
+  font-size: 50px;
+  color: #fff;
+  opacity: 1;
+}
+
+.footer .icon-container {
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.footer .icon-container:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  min-height: 650px;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: 'JetBrains Mono', sans-serif;
+  color: #fff;
+}
+
+.wrapper .group {
+  margin-bottom: 25px;
+}
+.wrapper .group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.wrapper .group input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 1s;
+}
+
+.wrapper .group input[type='text']:focus,
+textarea:focus {
+  border: 2px solid #171718;
+}
+textarea {
+  height: 100px;
+}
+
+.btn {
+  font-family: 'JetBrains Mono', sans-serif;
+  border-radius: 3px;
+  padding: 7px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+#formCompleted {
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}

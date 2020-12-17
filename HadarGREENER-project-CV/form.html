@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadar Resume - Contact Me</title>
+    <link rel="stylesheet" href="site-style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form onsubmit="return sendForm();">
+        <div class="group">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="full-name" placeholder="Enter your name." />
+        </div>
+        <div class="group">
+          <label for="who-are-you">Who are you?</label>
+          <input
+            type="text"
+            name="who-are-you"
+            placeholder="Tell me more about yourself"
+          />
+        </div>
+        <div class="group">
+          <label for="email">Your email</label>
+          <input type="text" name="email" placeholder="Enter your e-mail" />
+        </div>
+
+        <div class="group">
+          <label for="comments">Comments:</label>
+          <textarea
+            name="comments"
+            placeholder="Share your thoughts with me :)"
+          ></textarea>
+        </div>
+        <div id="formCompleted"></div>
+        <div class="button-group">
+          <button class="btn">Send form</button>
+          <a href="./" class="btn">Go back</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="./site-script.js"></script>
+  </body>
+</html>
