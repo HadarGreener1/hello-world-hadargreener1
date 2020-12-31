@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% set page_name = 'assignment8' %}
+
+{% include ('header.html') %}
+
+{% if first_name%}
+    <h3> user name: {{ first_name | upper }} </h3>
+    <h3> last name: {{ last_name }}</h3>
+    {% block cart %}
+    <h3>  hobbies :</h3>
+    <ol>
+        {% for hobby in hobbies_pref %}
+
+            <li>{{ hobby }}</li>
+            {% endfor %}
+    </ol>
+{% endblock %}
+{% else %}
+    <h3>You are not a user!</h3>
+{% endif %}
+
+
+
+</body>
+</html>
